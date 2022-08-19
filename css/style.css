@@ -1,0 +1,135 @@
+header{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+img{
+    height: 100px;
+    width: auto;
+}
+.recherche{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+#search{
+    /* width: 90%; */
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    background-color: #E7E7E7;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    margin-bottom: 40px;
+}
+.search_comboBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxInput{
+    height: 70px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search_ingredients{
+    margin-bottom: 15px;
+    /* background-color: #3282F7; */
+    border-radius: 5px;
+    width: min-content;
+}
+.search_appareil{
+    margin-bottom: 15px;
+    width: min-content;
+}
+.search_ustensiles{
+    width: min-content;
+}
+.ingredient_btn{
+    background-color: #3282F7;
+}
+.appareil_btn{
+    background-color: #68D9A4;
+}
+.ustens_btn{
+    background-color: #ED6454;
+}
+.btnIcon{
+    position: relative;
+    color: white;
+    left: 139px;
+    bottom: 46px;
+}
+.boxInput::placeholder{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.picturecard{
+    width: 350px;
+    background-color: #C7BEBE;
+    height: 190px;
+    margin: auto;
+    border-radius: 5px 5px 0px 0px;
+}
+.card_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_main{
+    display: flex;
+    flex-direction: row;
+}
+
+.list_ingredient{
+    list-style: none;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+}
+/* ici je met en place le style pour la liste d'ingredient etc .. */
+.ingredient{
+    list-style: none;
+    /* background-color: #3282F7; */
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.ingredient_item{
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+}
+/* qui s'arrete au hidden, car ce son les meme class. */
+/* .hidden{
+    display: none;
+} */
+.title_recette{
+    font-size: 18px;
+    font-weight: normal;
+    padding-left: 10px;
+}
+.card_recette_time{
+    margin-right: 10px;
+}
+.card_recette_description{
+    font-size: 12px;
+    overflow: hidden;
+    line-height: 1em;
+    width: 100%;
+    padding: 10px;
+    max-height: 8em;
+}
+.card{
+    background-color: #E7E7E7;
+    width: min-content;
+    margin: auto;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}

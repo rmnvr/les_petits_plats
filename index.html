@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <title>Les petits plats</title>
+</head>
+<body>
+    <header>
+      <img src="/image/unknown.png" alt="Logo les petits plats" title="Logo les petits plats">
+    </header>
+    <main>
+        <section class="recherche">
+            <label for="search">
+                <input id="search" type="text" placeholder="Rechercher une recette">
+            </label>
+          <div class="search_comboBox">
+            <div class="search_ingredients">
+              <input class="ingredient_btn boxInput" type="text" placeholder="Ingrédients">
+              <i class=" btnIcon fa-solid fa-chevron-down"></i> 
+              <ul class="ingredient">
+                <li class="ingredient_item hidden">Lait de coco</li>
+                <li class="ingredient_item hidden">Sucre</li>
+                <li class="ingredient_item hidden">Concombre</li>
+                <li class="ingredient_item hidden">Citron Vert</li>
+                <li class="ingredient_item hidden">Oignon</li>
+                <li class="ingredient_item hidden">Riz blanc</li>
+                <li class="ingredient_item hidden">Maïs</li>
+                <li class="ingredient_item hidden">Crème fraiche</li>
+                <li class="ingredient_item hidden">Pomme</li>
+                <li class="ingredient_item hidden">Chocolat au lait</li>
+                <li class="ingredient_item hidden">Jus de citron</li>
+              </ul>
+            </div>
+            <div class="search_appareil">
+              <input class="appareil_btn boxInput" type="text" placeholder="Appareil">
+              <i class=" btnIcon fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="search_ustensiles">
+              <input class="ustens_btn boxInput" type="text" placeholder="Ustensiles">
+              <i class=" btnIcon fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </section>
+        <section class="recette_card">
+          <article class="card">
+            <div class="picturecard"></div>
+            <div class="card_details">
+              <div class="card_header">
+                <h2 class="title_recette">Limonade de Coco</h2>
+                <p class="card_recette_time"><i class="fa-regular fa-clock"></i> 10min</p>
+              </div>
+              <div class="card_main">
+  
+                <ul class="list_ingredient">
+                  <li><b>Lait de coco:</b> 400ml</li>
+                  <li><b>Jus de citron:</b> 2</li>
+                  <li><b>Crème de coco:</b> 2 cuillères a soupe</li>
+                  <li><b>Sucre:</b> 30 grammes</li>
+                  <li><b>Glaçons</b></li>
+                </ul>
+                <p class="card_recette_description"> Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée</p>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="picturecard"></div>
+            <div class="card_details">
+              <div class="card_header">
+                <h2 class="title_recette">Poisson Cru à la tahitienne</h2>
+                <p class="card_recette_time"><i class="fa-regular fa-clock"></i> 60min</p>
+              </div>
+              <div class="card_main">
+  
+                <ul class="list_ingredient">
+                  <li><b>Thon Rouge (ou blanc):</b> 200g</li>
+                  <li><b>Concombre:</b> 1</li>
+                  <li><b>Tomate:</b> 2 </li>
+                  <li><b>Carotte:</b> 1</li>
+                  <li><b>Citron Vert</b> 5</li>
+                  <li><b>Lait de coco</b> 100ml</li>
+                </ul>
+                <p class="card_recette_description">Découper le thon en dés, mettre dans un plat et recouvrir de jus de citron vert (mieux vaut prendre un plat large et peu profond). Laisser reposer au réfrigérateur au moins 2 heures. (Si possible faites-le le soir pour le lendemain. Après avoir laissé mariner le poisson, coupez le concombre en fines rondelles sans la peau et les tomates en prenant soin de retirer les pépins. Rayer la carotte. Ajouter les légumes au poissons avec le citron cette fois ci dans un Saladier. Ajouter le lait de coco. Pour ajouter un peu plus de saveur vous pouver ajouter 1 à 2 cuillères à soupe de Crème de coco</p>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="picturecard"></div>
+            <div class="card_details">
+              <div class="card_header">
+                <h2 class="title_recette">Poulet coco réunionnais</h2>
+                <p class="card_recette_time"><i class="fa-regular fa-clock"></i> 80min</p>
+              </div>
+              <div class="card_main">
+  
+                <ul class="list_ingredient">
+                  <li><b>Poulet:</b> 1</li>
+                  <li><b>Lait de coco:</b> 400ml</li>
+                  <li><b>Coulis de tomate:</b> 25cl</li>
+                  <li><b>Oignon:</b> 1</li>
+                  <li><b>Poivron rouge</b> 1</li>
+                  <li><b>Huile d'olive</b></li>
+                </ul>
+                <p class="card_recette_description">Découper le poulet en morceaux, les faire dorer dans une cocotte avec de l'huile d'olive. Salez et poivrez. Une fois doré, laisser cuire en ajoutant de l'eau. Au bout de 30 minutes, ajouter le coulis de tomate, le lait de coco ainsi que le poivron et l'oignon découpés en morceaux. Laisser cuisiner 30 minutes de plus. Servir avec du riz</p>
+              </div>
+            </div>
+          </article>
+        </section>
+    </main>
+</body>
+</html>
