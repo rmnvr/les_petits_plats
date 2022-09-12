@@ -1,3 +1,8 @@
+main{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
 header{
     display: flex;
     justify-content: center;
@@ -38,19 +43,87 @@ img{
 }
 .search_ingredients{
     margin-bottom: 15px;
+    /* mettre le background color quand la section tri et ouverte */
     /* background-color: #3282F7; */
     border-radius: 5px;
     width: min-content;
+    /* mettre le width a 100% quand la section de tri et ouverte. */
+    /* width: 100%; */
+}
+/* ici c'est pour mettre en place le toggle */
+.ingredientOpen{
+    background-color: #3282F7;
+    width: 100%;
 }
 .search_appareil{
     margin-bottom: 15px;
     width: min-content;
+    /* a mettre quand c ouvert */
+    /* background-color: #68D9A4;
+    width: 40%; */
+}
+.appareil{
+    list-style: none;
+    background-color: #68D9A4;
+    max-height: 300px;
+    margin: 0;
+    column-count: 3;
+    padding: 0;
+    display: none;
+}
+.appareil_item{
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    cursor: pointer;
+}
+.ulAppareilOpen{
+    display: block;
+}
+.appareilOpen{
+    background-color: #68D9A4;
+    width: 40%;
 }
 .search_ustensiles{
     width: min-content;
 }
+/* a mettre quand c ouvert */
+.ustensiles_open{
+    background-color: #ED6454;
+    width: 40%;
+}
+.ustens{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    column-count: 3;
+    max-height: 300px;
+    display: none;
+}
+.ustensOpen{
+    /* display: block; */
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: scroll;
+}
+.iconUstensOpen{
+    bottom: 0px;
+    transform: rotate(180deg);
+}
+.ustens_item{
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    cursor: pointer;
+    margin-top: 5px;
+}
 .ingredient_btn{
     background-color: #3282F7;
+}
+.ingredient_btn:focus{
+   outline: none;
+   color: white;
 }
 .appareil_btn{
     background-color: #68D9A4;
@@ -63,6 +136,16 @@ img{
     color: white;
     left: 139px;
     bottom: 46px;
+}
+/* ici c'est pour mettre en place le toggle, sur l'icon de la fleche. */
+.appareil_icon{
+    bottom: 0px;
+}
+/* ici c'est pour mettre en place le toggle */
+.ing{
+    bottom: 0px;
+    /* left: 400px; */
+    transform: rotate(180deg);
 }
 .boxInput::placeholder{
     color: white;
@@ -96,20 +179,29 @@ img{
 /* ici je met en place le style pour la liste d'ingredient etc .. */
 .ingredient{
     list-style: none;
-    /* background-color: #3282F7; */
     margin: 0;
     padding: 0;
+    columns: 3;
+    max-height: 300px;
+    width: 100%;
     display: none;
+}
+/* ici c'est pour mettre en place le toggle */
+.ingredient_list_open{
+    /* display: block; */
+    background-color: #3282F7;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: scroll;
 }
 .ingredient_item{
     color: white;
     font-size: 18px;
     font-weight: normal;
+    margin-top: 10px;
+    cursor: pointer;
 }
-/* qui s'arrete au hidden, car ce son les meme class. */
-/* .hidden{
-    display: none;
-} */
 .title_recette{
     font-size: 18px;
     font-weight: normal;
@@ -117,6 +209,10 @@ img{
 }
 .card_recette_time{
     margin-right: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    font-weight: 700;
 }
 .card_recette_description{
     font-size: 12px;
@@ -124,12 +220,17 @@ img{
     line-height: 1em;
     width: 100%;
     padding: 10px;
-    max-height: 8em;
+    max-height: 6em;
 }
 .card{
     background-color: #E7E7E7;
     width: min-content;
-    margin: auto;
     margin-bottom: 25px;
     border-radius: 5px;
+    height: 410px;
+}
+.recette_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -16,6 +16,10 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        /* align-items: baseline; */
+        justify-content: center;
+        width: 100%;
+        justify-content: space-around;
     }
     .search_ingredients, .search_appareil{
         margin-right: 20px;
@@ -24,5 +28,8 @@
     .recherche{
         margin-left: 0px;
         margin-right: 0px;
+    }
+    .ing{
+        left: 65%;
     }
 }
