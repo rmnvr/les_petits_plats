@@ -5,7 +5,7 @@ import {openIngredient, openAppareil, openUstens} from "./utils/event.js";
 import {displayTag, displayTagAppareil, displayTagUstens} from "./utils/displayTag.js";
 import searchRecipe from "./algorithme1/algo.js";
 // import btnTriIngredient from "./factories/ingredientContainer.js"
-// import {btnTriUstens} from "./factories/tagContainer.js"
+import {allTags} from "./factories/tagContainer.js"
 
 
 // cette fonction affiche toute les recettes, quand on arrive sur le site
@@ -37,4 +37,19 @@ input.addEventListener('keyup', (e)=>{
     if(e.target.value.length > 2){
         searchRecipe(e.target.value, recipes)
     }
+    else{
+        displayRecipe(recipes)
+    }
 })
+
+// ici je vais mettre en place l'écouteur d'évenement pour géré les tags
+// const ingredient_item = document.querySelectorAll('.ingredient_item');
+// console.log(ingredient_item);
+
+// ingredient_item.forEach(element =>{
+//     element.addEventListener('click', ()=>{
+//         console.log();
+//     })
+// })
+
+allTags(recipes)
