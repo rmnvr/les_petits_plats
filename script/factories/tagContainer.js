@@ -48,13 +48,3 @@ export function btnTriUstens(recipes){
 
     return setUstens
 }
-
-export function allTags(recipes){
-    // ici je met en place un tableau qui me recupere tout les tags, qui va me servir pour géré la recherche par tags.
-    const tags = [];
-    tags.push(btnTriIngredient(recipes))
-    tags.push(btnTriAppareil(recipes))
-    tags.push(btnTriUstens(recipes))
-    
-    console.log(tags);
-}

@@ -4,12 +4,10 @@ import displayRecipe from "./utils/displayRecipe.js";
 import {openIngredient, openAppareil, openUstens} from "./utils/event.js";
 import {displayTag, displayTagAppareil, displayTagUstens} from "./utils/displayTag.js";
 import searchRecipe from "./algorithme1/algo.js";
-// import btnTriIngredient from "./factories/ingredientContainer.js"
-import {allTags} from "./factories/tagContainer.js"
-
-
+import refresh from "./utils/refresh.js"
 // cette fonction affiche toute les recettes, quand on arrive sur le site
-displayRecipe(recipes);
+// displayRecipe(recipes);
+refresh(recipes)
 
 // ici je recupere les 3 boutons de tri
 const btnIngredient = document.querySelector('.search_ingredients');
@@ -19,9 +17,9 @@ const input = document.querySelector('#search');
 
 
 //ici ce sont les fonctions qui affiches les tag dans les boutons de tri.
-displayTag(recipes);
-displayTagAppareil(recipes);
-displayTagUstens(recipes);
+// displayTag(recipes);
+// displayTagAppareil(recipes);
+// displayTagUstens(recipes);
 
 // ici je leurs met un ecouteur d'évenement qui au clique m'ouvrira les boutons, contenant leurs ingredient etc...
 
@@ -35,21 +33,30 @@ btnUstens.addEventListener('click', openUstens);
 input.addEventListener('keyup', (e)=>{
     // mettre condition pour commencer la recherche a partir de 3 lettres entrées.
     if(e.target.value.length > 2){
-        searchRecipe(e.target.value, recipes)
+        const newRecipe = searchRecipe(e.target.value, recipes)
+        // searchRecipe(e.target.value, recipes)
+        refresh(newRecipe)
+        // displayRecipe(newRecipe)
+        // displayTag(newRecipe)
+        // displayTagAppareil(newRecipe)
+        // displayTagUstens(newRecipe)
     }
     else{
-        displayRecipe(recipes)
+        refresh(recipes)
+        // displayRecipe(recipes)
     }
 })
 
-// ici je vais mettre en place l'écouteur d'évenement pour géré les tags
-// const ingredient_item = document.querySelectorAll('.ingredient_item');
-// console.log(ingredient_item);
+const inputIngredient = document.querySelector('.ingredient_btn');
+const inputAppareil = document.querySelector('.appareil_btn');
+const inputUstens = document.querySelector('.ustens_btn');
+const liIngredient = document.querySelector('.ingredient_item');
 
-// ingredient_item.forEach(element =>{
-//     element.addEventListener('click', ()=>{
-//         console.log();
-//     })
-// })
 
-allTags(recipes)
+inputIngredient.addEventListener('keyup', (e)=>{
+
+    if(e.target.value.length > 2){
+        // mettre la fonction de recherche pour sortir les ingredients correspondant.
+    }
+})
+// ici je vais mettre en place l'écouteur d'évenement sur l'input des tags.

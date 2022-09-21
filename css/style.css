@@ -34,6 +34,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 .boxInput{
     height: 70px;
@@ -233,4 +234,53 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* ici je m'occupe de l'affichage des tags */
+.tagSelect{
+    display: flex;
+    flex-direction: row;
+}
+.tagShowUpIngredient{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #3282F7;
+    border: none;
+    border-radius: 5px;
+}
+.tagShowUpIngredient p {
+    margin: 0px;
+    color: white;
+}
+.iconCloseTag{
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.tagShowUpAppareil{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #68D9A4;
+    border: none;
+    border-radius: 5px;
+}
+.tagShowUpAppareil p {
+    margin: 0px;
+    color: white;
+}
+
+.tagShowUpUstens{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #ED6454;
+    border: none;
+    border-radius: 5px;
+}
+.tagShowUpUstens p {
+    margin: 0px;
+    color: white;
 }

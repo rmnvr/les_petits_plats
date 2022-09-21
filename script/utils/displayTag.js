@@ -1,5 +1,8 @@
 import {btnTriIngredient, btnTriAppareil, btnTriUstens} from "../factories/tagContainer.js";
-
+import {selectTag, selectAppareil, selectUstens} from "./SelectTag.js";
+import {searchByTagAppareil, searchByTags, searchByTagUstens} from "../algorithme1/searchByTag.js";
+import displayRecipe from "./displayRecipe.js";
+import refresh from "./refresh.js";
 // ici je met en place des fonctions, qui vont elle même appeler les fonctions contenant les tableaux, qui eux meme contienne les ingredient, ustensiles ou appareil, et ensuite je les fais s'afficher dans le DOM
 
 export  function displayTag(recipes){
@@ -10,6 +13,22 @@ export  function displayTag(recipes){
         li.className="ingredient_item hidden";
         li.textContent = oneIngredient;
 
+        // ici je vais mettre en place l'écouteur d'évenement qui va me permettre de géré l'affichage des tags.
+        li.addEventListener('click', ()=>{ 
+            selectTag(oneIngredient);
+
+            const newSearchTag = searchByTags(oneIngredient, recipes)
+        
+            refresh(newSearchTag)
+            // displayRecipe(newSearchTag)
+            // displayTag(newSearchTag)
+            // displayTagAppareil(newSearchTag)
+            // displayTagUstens(newSearchTag)
+            //  le return a la fin me permet "d'appeler" la fonction.
+        })
+
+
+
         ul.appendChild(li);
     })
     return
@@ -19,9 +38,20 @@ export function displayTagAppareil(recipes){
     const tagAppareil = btnTriAppareil(recipes)
     const ulAppareil = document.querySelector('.appareil')
     tagAppareil.map(oneAppareil=>{
-        const li = document.createElement('li')
-        li.className="appareil_item"
-        li.textContent= oneAppareil
+        const li = document.createElement('li');
+        li.className="appareil_item";
+        li.textContent= oneAppareil;
+
+        li.addEventListener('click', ()=>{
+            selectAppareil(oneAppareil);
+
+            const newSearchTag = searchByTagAppareil(oneAppareil, recipes);
+
+            refresh(newSearchTag)
+            // displayRecipe(newSearchTag);
+            // displayTag(newSearchTag);
+            // displayTagUstens(newSearchTag);
+        })
 
         ulAppareil.appendChild(li);
     })
@@ -35,6 +65,21 @@ export function displayTagUstens(recipes){
         const li = document.createElement('li')
         li.className="ustens_item"
         li.textContent= oneUstens;
+
+
+        li.addEventListener('click', ()=>{
+            selectUstens(oneUstens);
+
+            const newSearchTag = searchByTagUstens(oneUstens, recipes);
+
+            refresh(newSearchTag)
+            // displayRecipe(newSearchTag)
+            // displayTag(newSearchTag)
+            // displayTagAppareil(newSearchTag)
+            
+        })
+
+
 
         ulUstens.appendChild(li)
     })
