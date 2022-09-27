@@ -1,6 +1,6 @@
 import {btnTriIngredient, btnTriAppareil, btnTriUstens} from "../factories/tagContainer.js";
 import {selectTag, selectAppareil, selectUstens} from "./SelectTag.js";
-import {searchByTagAppareil, searchByTags, searchByTagUstens, searchByTagsV2, searchByTagV3} from "../algorithme1/searchByTag.js";
+import {searchByTags, searchByTagsV2, searchByTagV3} from "../algorithme1/searchByTag.js";
 import displayRecipe from "./displayRecipe.js";
 import refresh from "./refresh.js";
 import { tagsArray } from "../index.js";
@@ -21,8 +21,8 @@ export  function displayTag(recipes){
 
 
             tagsArray.push(oneIngredient);
-            const newSearchTag = searchByTagsV2(tagsArray, recipes)
-            // const newSearchTag = searchByTagV3(tagsArray, recipes)
+            // const newSearchTag = searchByTagsV2(tagsArray, recipes)
+            const newSearchTag = searchByTagV3(tagsArray, recipes)
             
             // console.log("log pour voir ce qui a été ajouté dans le tableau :",tagsArray);
             console.log(newSearchTag);

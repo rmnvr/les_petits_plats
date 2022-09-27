@@ -5,29 +5,24 @@
 
 export function searchByTags(tagSelected, recipes){
     // mettre en place la fonction.
-    
-    const tagFiltre = recipes.filter((recipe)=> recipe.ingredients.some((ing)=> ing.ingredient.toLowerCase().includes(tagSelected)));
+    let selectedRecipes = [];
+    const ingredientsFiltre = recipes.filter((recipe)=> recipe.ingredients.some((ing)=> ing.ingredient.toLowerCase().includes(tagSelected)));
 
     // cleanHtml();
-
-    return tagFiltre;
-
-}
-export function searchByTagAppareil(tagSelected, recipes){
     // mettre en place la fonction
-    const tagFiltre = recipes.filter((recipe)=> recipe.appliance.toLowerCase().includes(tagSelected));
+    const applianceFiltre = recipes.filter((recipe)=> recipe.appliance.toLowerCase().includes(tagSelected));
     
     // cleanHtml();
-
-    return tagFiltre;
-}
-
-export function searchByTagUstens(tagSelected, recipes){
-    const tagFiltre = recipes.filter((recipe)=> recipe.ustensils.some((ustens)=> ustens.toLowerCase().includes(tagSelected)));
+    const ustensilsFiltre = recipes.filter((recipe)=> recipe.ustensils.some((ustens)=> ustens.toLowerCase().includes(tagSelected)));
 
     // cleanHtml();
 
-    return tagFiltre;
+    selectedRecipes = [
+        ...ingredientsFiltre,
+        ...applianceFiltre,
+        ...ustensilsFiltre,
+      ];
+      return selectedRecipes;
 }
 
 
@@ -84,7 +79,7 @@ export function searchByTagsV2(tagSelected, recipes){
     // ici j'ai essayer de regroupé les 3 fonctions dans une seule.. echec.
 }
 export function searchByTagV3(tagArray, recipes){
-    searchByTags(tagArray, recipes)
-    searchByTagAppareil(tagArray, recipes)
-    searchByTagUstens(tagArray, recipes)
+    const result = searchByTags(tagArray, recipes)
+    console.log('RESULT', result);
+    return result
 }
