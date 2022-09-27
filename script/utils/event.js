@@ -1,3 +1,6 @@
+// import { recipes } from "../../data/recipes.js";
+// import { tagsArray } from "../index.js";
+
 // ici faire la fonction d'ouverture du bouton ingrédient, et l'appeler sur l'add event listener situé sur la page index. 
 export function openIngredient(){
     //ici je récupere les elements dont j'ai besoin.
@@ -35,4 +38,4 @@ export function openUstens(){
 }
 
 
-// PAS FINIS !!! GERER CORRECTEMENT L'AFFICHAGE DE L'ICON
+// PAS FINIS !!! GERER CORRECTEMENT L'AFFICHAGE DE L'ICON, ici je peut, peut etre rajouté la page SelectTag, qui sert a l'affichage des petit boutons quand on choisis un tags.

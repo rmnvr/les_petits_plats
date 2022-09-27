@@ -7,6 +7,11 @@ import searchRecipe from "./algorithme1/algo.js";
 import refresh from "./utils/refresh.js"
 // cette fonction affiche toute les recettes, quand on arrive sur le site
 // displayRecipe(recipes);
+
+// je vais essayer de faire ce que ma dis le mentor, a savoir, crée un tableau accessible partout, qui va contenir les tags selectionné et effectué la recherche avec ce tableau et recipes du coup bien sur. il faut qu'a chaque ingredient ou appareil ou ustens cliqué il se rajoute ou s'enleve de se tableau.....
+
+export const tagsArray= [];
+// console.log(tagsArray);
 refresh(recipes)
 
 // ici je recupere les 3 boutons de tri
